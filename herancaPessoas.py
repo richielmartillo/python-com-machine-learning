@@ -24,14 +24,18 @@ class Cliente(Pessoa):
     def comprar(self, valor_compra):
         if valor_compra <= self.saldo:
             self.saldo -= valor_compra
-            print(f'A sua compra de {valor_compra} foi aprovada! Seu saldo atual é de: R${self.saldo}')
+            print(f'A sua compra de R${valor_compra} foi aprovada! Seu saldo atual é de: R${self.saldo}')
         else:
             print('Saldo insuficiente')
 
 
 f1 = Funcionario('Maria', 38, 'Gerente de contas')
-#f1.trabalhar()
+f1.apresentar()
+f1.trabalhar()
+
+print('---')
 
 c1 = Cliente('Arthur', 16, 200)
-#c1.apresentar()
-c1.comprar(300)
+c1.apresentar()
+c1.comprar(90)
+c1.comprar(150)
