@@ -1,0 +1,41 @@
+class Livro:
+    def __init__(self, titulo, author, paginas, disponivel):
+        self.titulo = titulo
+        self.author = author
+        self.paginas = paginas
+        self.disponivel = disponivel
+
+
+class Biblioteca:
+    def __init__(self):
+        self.livros = []
+
+    def adicionar_livro(self, livro):
+        self.livros.append(livro)
+
+    def listar_livros(self):
+        for livro in self.livros:
+            print(f"Título: {livro.titulo}")
+            print(f"Autor: {livro.author}")
+            print(f"Páginas: {livro.paginas}")
+            print(f"Disponível: {livro.disponivel}")
+            print("------------------------")
+
+
+# Criando os livros
+livro1 = Livro("Dom Casmurro", "Machado de Assis", 256, True)
+livro2 = Livro("O Pequeno Príncipe", "Antoine de Saint-Exupéry", 96, True)
+livro3 = Livro("1984", "George Orwell", 328, False)
+livro4 = Livro("O Hobbit", "John Ronald Reuel Tolkien", 421, True)
+
+# Criando a biblioteca
+biblioteca = Biblioteca()
+
+# Adicionando livros à biblioteca
+biblioteca.adicionar_livro(livro1)
+biblioteca.adicionar_livro(livro2)
+biblioteca.adicionar_livro(livro3)
+biblioteca.adicionar_livro(livro4)
+
+# Listando os livros
+biblioteca.listar_livros()
